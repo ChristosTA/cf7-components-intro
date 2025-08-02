@@ -6,7 +6,11 @@
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
 
 import Layout from "./components/Layout.tsx";
-import OnlineStatus from "./components/OnlineStatus.tsx";
+// import OnlineStatus from "./components/OnlineStatus.tsx";
+import {BrowserRouter, Route, Routes} from "react-router";
+import HomePage from "./pages/HomePage.tsx";
+import NameChangerPage from "./pages/NameChangerPage.tsx";
+import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -20,6 +24,10 @@ import OnlineStatus from "./components/OnlineStatus.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 
+function UserPage() {
+    return null;
+}
+
 function App() {
 
 // useEffect(() => {
@@ -29,7 +37,7 @@ function App() {
 
   return (
     <>
-        <Layout>
+        {/*<Layout>*/}
             {/*<ClassComponent/>*/}
             {/*<FunctionalComponent/>*/}
             {/*<ArrowFunctionalComponent/>*/}
@@ -46,9 +54,26 @@ function App() {
             {/*<CounterAdvancedWithCustomHook/>*/}
             {/*<CounterWithReducer />*/}
             {/*<Todo/>*/}
-            <OnlineStatus/>
 
-        </Layout>
+            {/*<OnlineStatus/>*/}
+
+        {/*</Layout>*/}
+        <BrowserRouter>
+            <Layout>
+                <Routes>
+                    {/*<Route path="/" element={<HomePage/>}/>*/}
+                    <Route index element={<HomePage />}/>
+                    <Route path="examples?">
+                        <Route path="name-changer" element={<NameChangerPage/>}/>
+                        <Route path="online-status" element={<OnlineStatusPage/>}/>
+                    </Route>
+                    {/*<Route path="examples?/name-changer" element={<NameChangerPage/>}/>*/}
+
+                    <Route path="users/:usersId" element={<UserPage />}/>
+
+                </Routes>
+            </Layout>
+        </BrowserRouter>
     </>
   )
 }
