@@ -6,25 +6,26 @@
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
 
 import Layout from "./components/Layout.tsx";
+import OnlineStatus from "./components/OnlineStatus.tsx";
 // import Counter from "./components/Counter.tsx";
-import NameChanger from "./components/NameChanger.tsx";
+// import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
 // import CounterWithCustomHook from "./components/CounterWithCustomHook.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
-import CounterWithReducer from "./components/CounterWithReducer.tsx";
-import Todo from "./components/Todo/Todo.tsx";
-import {useEffect} from "react";
+// import CounterWithReducer from "./components/CounterWithReducer.tsx";
+// import Todo from "./components/Todo/Todo.tsx";
+// import {useEffect} from "react";
 
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 
 function App() {
 
-useEffect(() => {
-        const id: number = setInterval(()=> console.log("Tick"), 1000);
-        return () => clearInterval(id)
-}, []);
+// useEffect(() => {
+//         const id: number = setInterval(()=> console.log("Tick"), 1000);
+//         return () => clearInterval(id)
+// }, []);
 
   return (
     <>
@@ -38,13 +39,14 @@ useEffect(() => {
             {/*<ClassComponentWithState/>*/}
             {/*<FunctionalComponentWithState/>*/}
             {/*<Counter/>*/}
-            <NameChanger/>
+            {/*<NameChanger/>*/}
             {/*<CounterWithMoreStates/>*/}
             {/*<CounterAdvanced/>*/}
             {/*<CounterWithCustomHook/>*/}
             {/*<CounterAdvancedWithCustomHook/>*/}
-            <CounterWithReducer />
-            <Todo/>
+            {/*<CounterWithReducer />*/}
+            {/*<Todo/>*/}
+            <OnlineStatus/>
 
         </Layout>
     </>
