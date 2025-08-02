@@ -1,17 +1,17 @@
-import { useEffect } from 'react'
-import { useParams } from "react-router";
+import {useEffect} from "react";
+import {useParams} from "react-router";
 
-const UserPage = () => {
-
+const UserPage = ()  => {
     const { userId } = useParams();
 
-    useEffect(() => {
-        document.title = `CF7  User id: ${ userId }`
+
+    useEffect(()=>{
+        document.title = `CF7 User id: ${ userId }`;
     }, [userId]);
 
-    return (
+    return(
         <>
-            <h1>User with id: {userId}</h1>
+            <h1 className="py-4 px-2">user with id: {userId}</h1>
         </>
     )
 }

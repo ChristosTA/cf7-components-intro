@@ -11,6 +11,7 @@ import {BrowserRouter, Route, Routes} from "react-router";
 import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
+import UserPage from "./pages/UserPage.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -23,10 +24,6 @@ import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
-
-function UserPage() {
-    return null;
-}
 
 function App() {
 
@@ -69,7 +66,10 @@ function App() {
                     </Route>
                     {/*<Route path="examples?/name-changer" element={<NameChangerPage/>}/>*/}
 
-                    <Route path="users/:usersId" element={<UserPage />}/>
+                    {/*<Route path="users/:usersId" element={<UserPage />}/>*/}
+                    <Route path="users/:userId" element={<UserPage />}/>
+                    <Route path="users" element={<UserPage />} />
+                    {/*<Route path="files/*" element={<FilePage/> }/>*/}
 
                 </Routes>
             </Layout>
