@@ -14,12 +14,17 @@ import NameChanger from "./components/NameChanger.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook.tsx";
 import CounterWithReducer from "./components/CounterWithReducer.tsx";
 import Todo from "./components/Todo/Todo.tsx";
+import {useEffect} from "react";
 
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 
 function App() {
 
+useEffect(() => {
+        const id: number = setInterval(()=> console.log("Tick"), 1000);
+        return () => clearInterval(id)
+}, []);
 
   return (
     <>
@@ -40,8 +45,6 @@ function App() {
             {/*<CounterAdvancedWithCustomHook/>*/}
             <CounterWithReducer />
             <Todo/>
-
-
 
         </Layout>
     </>
