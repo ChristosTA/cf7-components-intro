@@ -18,7 +18,8 @@ import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 // import FocusInput from "./components/FocusInput.tsx";
-import UnControlledInput from "./components/UnControlledInput.tsx";
+// import UnControlledInput from "./components/UnControlledInput.tsx";
+import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -68,7 +69,7 @@ function App() {
                     <Route element={<RouterLayout/>}>
                         {/*<Route index element={<HomePage />}/>*/}
                         {/*<Route index element={<FocusInput/>}/>*/}
-                        <Route index element={<UnControlledInput/>}/>
+                        <Route index element={<MultiFieldForm/>}/>
                         <Route path="users/:userId" element={<UserPage />}/>
                         <Route path="users" element={<UserPage />} />
                     </Route>
