@@ -13,6 +13,8 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import ExamplePage from "./pages/ExamplesPage.tsx";
+import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -61,11 +63,13 @@ function App() {
                 <Routes>
                     <Route element={<RouterLayout/>}>
                         <Route index element={<HomePage />}/>
-
+                        <Route path="users/:userId" element={<UserPage />}/>
+                        <Route path="users" element={<UserPage />} />
                     </Route>
                     {/*<Route path="/" element={<HomePage/>}/>*/}
-
-                    <Route path="examples?">
+                    {/*<Route path="examples?">*/}
+                    <Route path="examples" element={<RouterExamplesLayout/>}>
+                        <Route index element={<ExamplePage/>}/>
                         <Route path="name-changer" element={<NameChangerPage/>}/>
                         <Route path="online-status" element={<OnlineStatusPage/>}/>
                     </Route>
