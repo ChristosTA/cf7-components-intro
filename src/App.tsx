@@ -8,7 +8,7 @@
 // import Layout from "./components/Layout.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
 import {BrowserRouter, Route, Routes} from "react-router";
-import HomePage from "./pages/HomePage.tsx";
+// import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
@@ -17,6 +17,8 @@ import ExamplePage from "./pages/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+// import FocusInput from "./components/FocusInput.tsx";
+import UnControlledInput from "./components/UnControlledInput.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -64,7 +66,9 @@ function App() {
             {/*<Layout>*/}
                 <Routes>
                     <Route element={<RouterLayout/>}>
-                        <Route index element={<HomePage />}/>
+                        {/*<Route index element={<HomePage />}/>*/}
+                        {/*<Route index element={<FocusInput/>}/>*/}
+                        <Route index element={<UnControlledInput/>}/>
                         <Route path="users/:userId" element={<UserPage />}/>
                         <Route path="users" element={<UserPage />} />
                     </Route>
