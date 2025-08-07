@@ -22,6 +22,7 @@ import NotFoundPage from "./pages/NotFoundPage.tsx";
 // import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
 import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
+import MultiFieldFormWithReactHook from "@/components/MultiFieldFormWithReactHook.tsx";
 // import Counter from "./components/Counter.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
@@ -41,6 +42,43 @@ function App() {
 //         const id: number = setInterval(()=> console.log("Tick"), 1000);
 //         return () => clearInterval(id)
 // }, []);
+
+
+    // const url: string ="/api/v1/products";
+    // fetch(url, {
+    //     method: "POST",
+    //     headers: {"content-type": "application/json" },
+    //     body: JSON.stringify(payload)
+    // })
+    //     .then(res => {
+    //         if (!res.ok) throw new Error(res.statusText);
+    //         return res.json();
+    //     }
+    //     )
+    //     .then(data => {})
+    //     .catch(err => {})
+    //
+    //
+    //
+    // async  function fetchData(url, method = "GET", payload= null) {
+    //     try {
+    //         const options = {
+    //             method,
+    //             headers: { "Content-Type": "application/json" },
+    //         };
+    //         if(payload) option.body = JSON.stringify(payload);
+    //         const res= await fetch(url, options);
+    //         if(!res.ok) throw new Error(res.statusText);
+    //
+    //         return await res.json();
+    //
+    //
+    //     }catch(err) {
+    //         console.error(err);
+    //     }
+    //
+    //
+    // }
 
   return (
     <>
@@ -71,7 +109,7 @@ function App() {
                     <Route element={<RouterLayout/>}>
                         {/*<Route index element={<HomePage />}/>*/}
                         {/*<Route index element={<FocusInput/>}/>*/}
-                        <Route index element={<MultiFieldFormWithZodValidation/>}/>
+                        <Route index element={<MultiFieldFormWithReactHook/>}/>
                         <Route path="users/:userId" element={<UserPage />}/>
                         <Route path="users" element={<UserPage />} />
                     </Route>
